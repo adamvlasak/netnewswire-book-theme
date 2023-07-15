@@ -9,8 +9,10 @@
     background-color: #282525;
   }
 
-  a, a:visited, a:hover {
-    color: orange
+  a,
+  a:visited,
+  a:hover {
+    color: orange;
   }
 }
 
@@ -28,8 +30,10 @@ body {
 img,
 figure,
 video,
+iframe,
+embed,
 object {
-  max-width: 100%;
+  max-width: 100% !important;
   height: auto !important;
   margin: 0.5em auto;
 }
@@ -54,7 +58,12 @@ ol li {
   margin-left: 1.5em;
 }
 
-pre, code {
+pre,
+code {
+  overflow-x: auto;
+}
+
+code {
   font-family: "Fira Code";
   font-size: 10pt;
 }
