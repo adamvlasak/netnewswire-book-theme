@@ -1,9 +1,18 @@
+$font_family: "PT Serif", serif;
+$font_size: 12;
+$mono_font_family: "Fira Code", monospaced;
+$mono_font_size: 10;
+$line_height: 1.5;
+$border_size: 5px;
+$spacing: 0.5em;
+
 $light_theme_foreground_color: black;
 $light_theme_background_color: white;
 $light_theme_accent_color: blue;
 $dark_theme_foreground_color: #efefef;
 $dark_theme_background_color: #282525;
 $dark_theme_accent_color: orange;
+
 
 * {
   margin: 0;
@@ -32,8 +41,8 @@ $dark_theme_accent_color: orange;
   }
 
   blockquote {
-    border-left: 3px solid $dark_theme_accent_color;
-    border-right: 3px solid $dark_theme_accent_color;
+    border-left: $border_size solid $dark_theme_accent_color;
+    border-right: $border_size solid $dark_theme_accent_color;
   }
 
   img,
@@ -68,8 +77,8 @@ $dark_theme_accent_color: orange;
   }
 
   blockquote {
-    border-left: 3px solid $light_theme_accent_color;
-    border-right: 3px solid $light_theme_accent_color;
+    border-left: $border_size solid $light_theme_accent_color;
+    border-right: $border_size solid $light_theme_accent_color;
   }
 
   img,
@@ -84,10 +93,10 @@ $dark_theme_accent_color: orange;
 
 body {
   box-sizing: border-box;
-  font-size: 13pt;
-  font-family: "PT Serif", serif;
-  line-height: 1.5;
-  margin: 1em;
+  font-size: #{$font_size + "pt"};
+  font-family: $font_family;
+  line-height: $line_height;
+  margin: #{2 * $spacing};
 }
 
 header {
@@ -95,8 +104,8 @@ header {
 }
 
 hr {
-  margin: 0.5em 0;
-  margin-bottom: 1.5em;
+  margin: $spacing 0;
+  margin-bottom: #{3 * $spacing};
 }
 
 .small {
@@ -104,9 +113,9 @@ hr {
 }
 
 blockquote {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin: 0.5em auto;
+  padding-left: $spacing;
+  padding-right: $spacing;
+  margin: $spacing auto;
   font-style: italic;
 }
 
@@ -114,20 +123,20 @@ img {
   display: block;
   max-width: 100% !important;
   height: auto !important;
-  margin: 0.5em auto;
+  margin: $spacing auto;
 }
 
 iframe {
   width: 100%;
   min-width: max-content !important;
   min-height: max-content !important;
-  margin: 0.5em auto;
+  margin: $spacing auto;
   border: none;
 }
 
 p {
   text-align: justify;
-  margin: 0.5em 0;
+  margin: $spacing 0;
 }
 
 h1,
@@ -136,13 +145,13 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0.5em 0;
+  margin: $spacing 0;
   font-size: 110%;
 }
 
 h1 {
   max-width: 50%;
-  margin: 0.5em auto;
+  margin: $spacing auto;
 }
 
 ul {
@@ -150,15 +159,12 @@ ul {
 }
 
 li {
-  margin-left: 1.5em;
+  margin-left: #{3 * $spacing};
 }
 
 pre,
 code {
-  overflow-x: auto;
-}
-
-code {
-  font-family: "Fira Code";
-  font-size: 10pt;
+  overflow: auto;
+  font-family: $mono_font_family;
+  font-size: #{($mono_font_size) + "pt"};
 }
