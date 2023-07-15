@@ -19,7 +19,7 @@
     border-left: 3px solid orange;
   }
 
-  img {
+  img, iframe {
     background-color: #efefef;
   }
 }
@@ -76,9 +76,11 @@ img {
 }
 
 iframe {
+  width: 100%;
   min-width: max-content !important;
   min-height: max-content !important;
   margin: 0.5em auto;
+  border: none;
 }
 
 p {
