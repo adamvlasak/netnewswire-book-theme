@@ -53,6 +53,11 @@ $dark_theme_accent_color: orange;
   .small {
     color: $dark_theme_foreground_color;
   }
+
+  pre {
+    color: $dark_theme_background_color;
+    background-color: rgba($color: $dark_theme_foreground_color, $alpha: 0.9);
+  }
 }
 
 @media screen and (prefers-color-scheme: light) {
@@ -89,6 +94,11 @@ $dark_theme_accent_color: orange;
   .small {
     color: $light_theme_foreground_color;
   }
+
+  pre {
+    color: $light_theme_background_color;
+    background-color: rgba($color: $light_theme_foreground_color, $alpha: 0.9);
+  }
 }
 
 body {
@@ -113,23 +123,27 @@ hr {
 }
 
 blockquote {
+  font-style: italic;
+  text-align: justify;
   padding-left: $spacing;
   padding-right: $spacing;
   margin: $spacing auto;
-  font-style: italic;
+  border-radius: $border_size;
 }
 
 img {
   display: block;
-  max-width: 100% !important;
-  height: auto !important;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
   margin: $spacing auto;
+  border: none;
 }
 
 iframe {
   width: 100%;
-  min-width: max-content !important;
-  min-height: max-content !important;
+  min-width: max-content;
+  min-height: max-content;
   margin: $spacing auto;
   border: none;
 }
@@ -162,9 +176,15 @@ li {
   margin-left: #{3 * $spacing};
 }
 
-pre,
-code {
+pre {
   overflow: auto;
+  margin: $spacing 0;
+  padding: $spacing;
+  font-family: $mono_font_family;
+  font-size: #{($mono_font_size) + "pt"};
+}
+
+code {
   font-family: $mono_font_family;
   font-size: #{($mono_font_size) + "pt"};
 }
