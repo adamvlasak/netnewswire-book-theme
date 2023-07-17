@@ -1,7 +1,7 @@
 $font_family: "PT Serif", serif;
-$font_size: 12;
+$font_size: 12pt;
 $mono_font_family: "Fira Code", monospaced;
-$mono_font_size: 10;
+$mono_font_size: 10pt;
 $line_height: 1.5;
 $border_size: 5px;
 $spacing: 0.5em;
@@ -102,7 +102,7 @@ $dark_theme_accent_color: orange;
 
 body {
   box-sizing: border-box;
-  font-size: #{$font_size + "pt"};
+  font-size: $font_size;
   font-family: $font_family;
   line-height: $line_height;
   margin: calc(2 * $spacing);
@@ -180,10 +180,10 @@ pre {
   margin: $spacing 0;
   padding: $spacing;
   font-family: $mono_font_family;
-  font-size: #{($mono_font_size) + "pt"};
+  font-size: $mono_font_size;
 }
 
 code {
   font-family: $mono_font_family;
-  font-size: #{($mono_font_size) + "pt"};
+  font-size: $mono_font_size;
 }
