@@ -13,7 +13,6 @@ $dark_theme_foreground_color: #efefef;
 $dark_theme_background_color: #282525;
 $dark_theme_accent_color: orange;
 
-
 * {
   margin: 0;
   padding: 0;
@@ -106,7 +105,8 @@ body {
   font-size: #{$font_size + "pt"};
   font-family: $font_family;
   line-height: $line_height;
-  margin: #{2 * $spacing};
+  margin: calc(2 * $spacing);
+  margin-bottom: calc(4 * $spacing);
 }
 
 header {
@@ -115,7 +115,7 @@ header {
 
 hr {
   margin: $spacing 0;
-  margin-bottom: #{3 * $spacing};
+  margin-bottom: calc(3 * $spacing);
 }
 
 .small {
@@ -134,7 +134,6 @@ blockquote {
 img {
   display: block;
   max-width: 100%;
-  width: 100%;
   height: auto;
   margin: $spacing auto;
   border: none;
@@ -173,7 +172,7 @@ ul {
 }
 
 li {
-  margin-left: #{3 * $spacing};
+  margin-left: calc(3 * $spacing);
 }
 
 pre {
