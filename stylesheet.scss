@@ -8,10 +8,10 @@ $spacing: 0.5em;
 
 $light_theme_foreground_color: black;
 $light_theme_background_color: white;
-$light_theme_accent_color: blue;
+$light_theme_accent_color: rgba(77, 138, 240);
 $dark_theme_foreground_color: #efefef;
 $dark_theme_background_color: #282525;
-$dark_theme_accent_color: orange;
+$dark_theme_accent_color: rgba(77, 138, 240);;
 
 * {
   margin: 0;
@@ -26,17 +26,13 @@ $dark_theme_accent_color: orange;
 
   h1 a {
     text-decoration: none;
-    color: $dark_theme_accent_color;
+    color: $dark_theme_foreground_color;
   }
 
   article a {
     color: $dark_theme_accent_color;
     text-decoration: underline;
     font-weight: bold;
-  }
-
-  a:hover {
-    color: $dark_theme_accent_color;
   }
 
   blockquote {
@@ -67,17 +63,13 @@ $dark_theme_accent_color: orange;
 
   h1 a {
     text-decoration: none;
-    color: $light_theme_accent_color;
+    color: $light_theme_foreground_color;
   }
 
   article a {
     color: $light_theme_accent_color;
     text-decoration: underline;
     font-weight: bold;
-  }
-
-  a:hover {
-    color: $light_theme_accent_color;
   }
 
   blockquote {
