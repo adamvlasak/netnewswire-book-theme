@@ -56,6 +56,10 @@ $dark_theme_accent_color: #FFC107;
       color: $dark_theme_background_color;
       background-color: rgba($color: $dark_theme_foreground_color, $alpha: 0.9);
     }
+
+    tr:nth-child(2n) {
+      background-color: rgba($color: $dark_theme_foreground_color, $alpha: 0.1);
+    }
   }
 }
 
@@ -96,6 +100,10 @@ $dark_theme_accent_color: #FFC107;
     pre {
       color: $light_theme_background_color;
       background-color: rgba($color: $light_theme_foreground_color, $alpha: 0.9);
+    }
+
+    tr:nth-child(2n) {
+      background-color: rgba($color: $light_theme_foreground_color, $alpha: 0.1);
     }
   }
 }
@@ -199,5 +207,20 @@ article {
   code {
     font-family: $mono_font_family;
     font-size: $mono_font_size;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: $spacing;
+    text-align: left;
+    margin: 0;
+  }
+
+  th {
+    font-weight: bold;
   }
 }
