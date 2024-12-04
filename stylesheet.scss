@@ -1,0 +1,226 @@
+$font_family: "PT Serif", serif;
+$font_size: 12pt;
+$mono_font_family: "Fira Code", monospaced;
+$mono_font_size: 10pt;
+$line_height: 1.5;
+$border_size: 5px;
+$spacing: 0.5em;
+
+$light_theme_foreground_color: black;
+$light_theme_background_color: white;
+$light_theme_accent_color: rgba(77, 138, 240);
+$dark_theme_foreground_color: #FAFAFA;
+$dark_theme_background_color: #212121;
+$dark_theme_accent_color: #FFC107;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    color: $dark_theme_foreground_color;
+    background-color: $dark_theme_background_color;
+  }
+
+  header {
+    h1 a {
+      color: $dark_theme_foreground_color;
+    }
+
+    .small {
+      color: $dark_theme_foreground_color;
+    }
+  }
+
+  article {
+    a {
+      color: $dark_theme_accent_color;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    blockquote {
+      border-left: $border_size solid $dark_theme_accent_color;
+      border-right: $border_size solid $dark_theme_accent_color;
+    }
+
+    img,
+    iframe {
+      background-color: $dark_theme_foreground_color;
+    }
+
+
+    pre {
+      background-color: rgba($color: $dark_theme_foreground_color, $alpha: 0.1);
+    }
+
+    tr:nth-child(2n) {
+      background-color: rgba($color: $dark_theme_foreground_color, $alpha: 0.1);
+    }
+  }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  body {
+    color: $light_theme_foreground_color;
+    background-color: $light_theme_background_color;
+  }
+
+
+  header {
+    h1 a {
+      color: $light_theme_foreground_color;
+    }
+
+    .small {
+      color: $light_theme_foreground_color;
+    }
+  }
+
+  article {
+    a {
+      color: $light_theme_accent_color;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    blockquote {
+      border-left: $border_size solid $light_theme_accent_color;
+      border-right: $border_size solid $light_theme_accent_color;
+    }
+
+    img,
+    iframe {
+      background-color: $light_theme_foreground_color;
+    }
+
+    pre {
+      background-color: rgba($color: $light_theme_foreground_color, $alpha: 0.1);
+    }
+
+    tr:nth-child(2n) {
+      background-color: rgba($color: $light_theme_foreground_color, $alpha: 0.1);
+    }
+  }
+}
+
+body {
+  font-size: 100%;
+  box-sizing: border-box;
+  font-size: $font_size;
+  font-family: $font_family;
+  line-height: $line_height;
+  margin: calc(2 * $spacing);
+  margin-bottom: calc(4 * $spacing);
+}
+
+
+header {
+  text-align: center;
+
+  h1 {
+    font-size: 125%;
+    max-width: 50%;
+    margin: $spacing auto;
+  }
+
+  h1 a {
+    text-decoration: none;
+  }
+
+  .small {
+    font-size: smaller;
+    margin: calc(2 * $spacing);
+  }
+}
+
+hr {
+  margin: $spacing 0;
+  margin-bottom: calc(3 * $spacing);
+}
+
+
+article {
+  text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+  blockquote {
+    font-style: italic;
+    padding-left: $spacing;
+    padding-right: $spacing;
+    margin: $spacing auto;
+    border-radius: $border_size;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: $spacing auto;
+    border: none;
+  }
+
+  iframe {
+    width: 100%;
+    min-width: max-content;
+    min-height: max-content;
+    margin: $spacing auto;
+    border: none;
+  }
+
+  p {
+    margin: $spacing 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: $spacing 0;
+    font-size: 110%;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  li {
+    margin-left: calc(3 * $spacing);
+  }
+
+  pre {
+    overflow: auto;
+    margin: $spacing 0;
+    padding: $spacing;
+    font-family: $mono_font_family;
+    font-size: $mono_font_size;
+  }
+
+  code {
+    font-family: $mono_font_family;
+    font-size: $mono_font_size;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: $spacing;
+    text-align: left;
+    margin: 0;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}
