@@ -143,6 +143,7 @@ hr {
 
 
 article {
+  font-size: 100%;
   text-align: justify;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -159,9 +160,10 @@ article {
 
   img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
     height: auto;
-    margin: $spacing auto;
+    margin: calc(2 * $spacing) auto;
     border: none;
   }
 
@@ -199,7 +201,7 @@ article {
   pre {
     overflow: auto;
     margin: $spacing 0;
-    padding: $spacing;
+    padding: calc(2 * $spacing);
     font-family: $mono_font_family;
     font-size: $mono_font_size;
   }
